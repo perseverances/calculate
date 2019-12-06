@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/binaryconversion"
+        android:title="进制转换"></item>
+    <item
+        android:id="@+id/unitconversion"
+        android:title="单位换算"></item>
+    <item
+        android:id="@+id/calculator"
+        android:title="计算器"></item>
+    <item
+        android:id="@+id/contactauthor"
+        android:title="联系作者"></item>
+    <item
+        android:id="@+id/help"
+        android:title="帮助"></item>
+    <item
+        android:id="@+id/exit"
+        android:title="退出"></item>
+
+
+</menu>
