@@ -16,21 +16,21 @@ public class BinaryConversion {
      */
     public static boolean isTrueNum(String num, String message) {
         //message为二进制
-        if ("Binary".equals(message)) {
+        if ("二进制".equals(message)) {
             String numBinReg = "[0-1]*";
             return Pattern.matches(numBinReg, num);
 
         }
         //message为八进制
-        else if ("Octal".equals(message)) {
+        else if ("八进制".equals(message)) {
             String numOctReg = "[0-7]*";
             return Pattern.matches(numOctReg, num);
-        } else if ("Decimal".equals(message)) {
+        } else if ("十进制".equals(message)) {
             String numDecReg = "[0-9]*";
             return Pattern.matches(numDecReg, num);
         }
         //message为十六进制
-        else if ("Hexadecimal".equals(message)) {
+        else if ("十六进制".equals(message)) {
             String numHexReg = "([0-7]|[A-F])*";
             return Pattern.matches(numHexReg, num);
         }
@@ -49,53 +49,53 @@ public class BinaryConversion {
         String result = null;
         if (current.equals(target)) {
             result = value;
-        } else if ("Binary".equals(current)) {
+        } else if ("二进制".equals(current)) {
             switch (target) {
-                case "Octal":
+                case "八进制":
                     result = binToOct(value);
                     break;
-                case "Decimal":
+                case "十进制":
                     result = binToDec(value);
                     break;
-                case "Hexadecimal":
+                case "十六进制":
                     result = binToHex(value);
                     break;
             }
         }
-        else if ("Octal".equals(current)){
+        else if ("八进制".equals(current)){
             switch (target){
-                case "Binary":
+                case "二进制":
                     result = octToBin(value);
                     break;
-                case "Decimal":
+                case "十进制":
                     result = octToDec(value);
                     break;
-                case "Hexadecimal":
+                case "十六进制":
                     result = octToHex(value);
                     break;
             }
         }
-        else if ("Decimal".equals(current)){
+        else if ("十进制".equals(current)){
             switch (target){
-                case "Binary":
+                case "二进制":
                     result = decToBin(value);
                     break;
-                case "Octal":
+                case "八进制":
                     result = decToOct(value);
                     break;
-                case "Hexadecimal" :
+                case "十六进制" :
                     result = decToHex(value);
                     break;
             }
         }
-        else if ("Hexadecimal".equals(current)){
+        else if ("十六进制".equals(current)){
             switch (target){
-                case "Binary":
+                case "二进制":
                     result = hexToBin(value);
                     break;
-                case "Octal":
+                case "八进制":
                     result = hexToOct(value);
-                case "Decimal":
+                case "十进制":
                     result = hexToDec(value);
             }
         }

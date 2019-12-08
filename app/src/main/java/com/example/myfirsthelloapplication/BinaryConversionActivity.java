@@ -18,7 +18,7 @@ import com.example.myfirsthelloapplication.utils.BinaryConversion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryConversionActivity extends AppCompatActivity {
+public class BinaryConversionActivity extends AppCompatActivity {       //二进制转化
 
     //当前字符串代表进制
     String currentBinString = null;
@@ -112,9 +112,9 @@ public class BinaryConversionActivity extends AppCompatActivity {
     private void initDatas() {
         //初始化list
         list = new ArrayList<String>();
-        list.add("Binary");
-        list.add("Octal");
-        list.add("Decimal");
-        list.add("Hexadecimal");
+        list.add("二进制");
+        list.add("八进制");
+        list.add("十进制");
+        list.add("十六进制");
     }
 }

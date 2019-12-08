@@ -21,9 +21,9 @@ public class UnitConversion {
             return true;
         }
         //当前单位为长度单位
-        if (("cm".equals(current)) || ("m".equals(current)) || ("km".equals(current))) {
+        if (("厘米".equals(current)) || ("米".equals(current)) || ("千米".equals(current))) {
             //目标单位也为长度单位
-            if (("cm".equals(target)) || ("m".equals(target)) || ("km".equals(target))) {
+            if (("厘米".equals(target)) || ("米".equals(target)) || ("千米".equals(target))) {
                 return true;
             } else {
                 return false;
@@ -50,9 +50,9 @@ public class UnitConversion {
         }
 
         //当前单位为体积
-        if (("cm³".equals(current)) || ("m³".equals(current)) || ("km³".equals(current))){
+        if (("立方厘米".equals(current)) || ("立方米".equals(current)) || ("立方千米".equals(current))){
             //目标单位也为体积单位
-            if (("cm³".equals(target)) || ("m³".equals(target)) || ("km³".equals(target))){
+            if (("立方厘米".equals(target)) || ("立方米".equals(target)) || ("立方千米".equals(target))){
                 return true;
             }
             else {
@@ -100,7 +100,7 @@ public class UnitConversion {
         }
 
         //需要转化的长度单位
-        if (("cm".equals(current)) || ("m".equals(current)) || ("km".equals(current))) {
+        if (("厘米".equals(current)) || ("米".equals(current)) || ("千米".equals(current))) {
             //进入长度转化方法
             result = lengthConversion(current, target, num);
         } else if (("g".equals(current)) || ("kg".equals(current)) || ("t".equals(current))) {
@@ -111,7 +111,7 @@ public class UnitConversion {
             result = areaConversion(current, target, num);
 
         }
-        else if (("cm³".equals(current)) || ("m³".equals(current)) || ("km³".equals(current))){
+        else if (("立方厘米".equals(current)) || ("立方米".equals(current)) || ("立方千米".equals(current))){
             //进入提及转化方法
             result= volumeConversion(current, target, num);
         }
@@ -171,28 +171,28 @@ public class UnitConversion {
      */
     private static String volumeConversion(String current, String target, String num) {
         String result = null;
-        if ("cm³".equals(current)){
+        if ("立方厘米".equals(current)){
             switch (target){
-                case "m³":
+                case "立方米":
                     result = (Double.valueOf(num) / Math.pow(10,6))+"";
                     break;
-                case "km³":
+                case "立方千米":
                     result = (Double.valueOf(num)) / Math.pow(10,15)+"";
             }
         }
-        else if ("m³".equals(current)){
+        else if ("立方米".equals(current)){
             switch (target){
-                case "cm³":
+                case "立方厘米":
                     result = (Double.valueOf(num) * Math.pow(10,6))+"";
-                case "km³":
+                case "立方千米":
                     result = (Double.valueOf(num) / Math.pow(10,9))+"";
             }
         }
-        else if ("km³".equals(current)){
+        else if ("立方千米".equals(current)){
             switch (target){
-                case  "cm³":
+                case  "立方厘米":
                     result =( Double.valueOf(num)* Math.pow(10,15))+"";
-                case "m³":
+                case "立方米":
                     result = (Double.valueOf(num)* Math.pow(10,9))+"";
             }
         }
@@ -283,30 +283,30 @@ public class UnitConversion {
     private static String lengthConversion(String current, String target, String num) {
         String result = null;
         //double med
-        if ("cm".equals(current)) {
+        if ("厘米".equals(current)) {
             switch (target) {
-                case "m":
+                case "米":
                     result = (Double.valueOf(num) / 100) + "";
                     break;
-                case "km":
+                case "千米":
                     result = (Double.valueOf(num) / Math.pow(10, 5) + "");
                     break;
             }
-        } else if ("m".equals(current)) {
+        } else if ("米".equals(current)) {
             switch (target) {
-                case "cm":
+                case "厘米":
                     result = (Double.valueOf(num) * 100) + "";
                     break;
-                case "km":
+                case "千米":
                     result = (Double.valueOf(num) / 1000) + "";
                     break;
             }
-        } else if ("km".equals(current)) {
+        } else if ("千米".equals(current)) {
             switch (target) {
-                case "cm":
+                case "厘米":
                     result = ((Double.valueOf(num)) * Math.pow(10, 5)) + "";
                     break;
-                case "m":
+                case "米":
                     result = (Double.valueOf(num) * 1000) + "";
                     break;
             }

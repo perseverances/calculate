@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myfirsthelloapplication.utils.Calculator;
 
-
+//主界面
 /**
  * 计算器类
  */
@@ -401,11 +401,6 @@ public class CalActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //分支判断哪个组件被点击
         switch (item.getItemId()) {
-            case R.id.contactauthor:
-                //创建intent对象用于activity转换
-                Intent intent_contact = new Intent(CalActivity.this, ContactAuthorActivity.class);
-                startActivity(intent_contact);
-                break;
             case R.id.help:
                 Intent intent_help = new Intent(CalActivity.this, HelpAvtivity.class);
                 startActivity(intent_help);
@@ -422,9 +417,7 @@ public class CalActivity extends AppCompatActivity {
                 Intent intent_cal = new Intent(CalActivity.this, CalActivity.class);
                 startActivity(intent_cal);
                 break;
-            case R.id.exit:
-                finish();
-                break;
+
 
         }
         return super.onOptionsItemSelected(item);

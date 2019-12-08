@@ -120,20 +120,20 @@ public class UnitConversionActivity extends AppCompatActivity {
 
         //初始化list
         list = new ArrayList<String>();
-        list.add("cm");
-        list.add("m");
-        list.add("km");
-        list.add("g");
-        list.add("kg");
-        list.add("t");
-        list.add("cm²");
-        list.add("m²");
-        list.add("km²");
-        list.add("cm³");
-        list.add("m³");
-        list.add("km³");
-        list.add("h");
-        list.add("min");
-        list.add("sec");
+        list.add("厘米");
+        list.add("米");
+        list.add("千米");
+//        list.add("克");
+//        list.add("千克");
+//        list.add("吨");
+//        list.add("平方厘米");
+//        list.add("平方米");
+//        list.add("平方千米");
+        list.add("立方厘米");
+        list.add("立方米");
+        list.add("立方千米");
+//        list.add("时");
+//        list.add("分");
+//        list.add("秒");
     }
 }

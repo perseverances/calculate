@@ -10,14 +10,7 @@
         android:id="@+id/calculator"
         android:title="计算器"></item>
     <item
-        android:id="@+id/contactauthor"
-        android:title="联系作者"></item>
-    <item
         android:id="@+id/help"
         android:title="帮助"></item>
-    <item
-        android:id="@+id/exit"
-        android:title="退出"></item>
-
 
 </menu>
